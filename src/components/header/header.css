@@ -1,0 +1,19 @@
+/* when i added classname nav-link to only 1 button both buttons shifted to right why? and my we change me-auto className
+where is navbar and nav-brand className in js file*/
+.navbar{
+    background-color: #343a40;
+}
+.navbar .navbar-brand{
+    color: #fff;
+}
+.navbar .nav-link{
+    color: #fff !important;
+    text-decoration: none !important;
+    margin-right: 20px;
+}
+
+@media (max-width: 576px){
+    .navbar .nav-link{
+        margin-right: 0;
+    }
+}
