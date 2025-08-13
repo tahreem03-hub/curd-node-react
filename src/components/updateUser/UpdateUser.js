@@ -16,7 +16,7 @@ const UpdateUser = () => {
     useEffect(()=>{
         const fetchUser=async ()=>{
           try{
-            const response = await fetch(`http://localhost:5000/api/user/${id}`)
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/user/${id}`)
             const data = await response.json();
             setFormData(data);
           }catch(error){
@@ -37,7 +37,7 @@ const UpdateUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/user/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/user/${id}`, {
         method: 'PATCH',
         headers: {
           "Content-type": "application/json",
